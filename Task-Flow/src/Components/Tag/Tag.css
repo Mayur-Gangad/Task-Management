@@ -1,4 +1,3 @@
-
 .tag {
   font-size: 14px;
   font-weight: 500;
@@ -7,4 +6,9 @@
   cursor: pointer;
   border-radius: 3px;
   padding: 4px 6px;
+  transition: background-color 0.3s ease;
+}
+
+.tag:hover {
+  background-color: aqua;
 }

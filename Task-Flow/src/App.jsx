@@ -2,11 +2,16 @@ import "./app.css";
 import TaskColumns from "./Components/TaskColumn/TaskColumns";
 import TaskForm from "./Components/TaskForm/TaskForm";
 import ChcekIcon from "../src/assets/checked.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+const existingTasks = localStorage.getItem("tasks");
 
 const App = () => {
-  const [tasks, setTasks] = useState([]);
-  // console.log(tasks);
+  const [tasks, setTasks] = useState(JSON.parse(existingTasks));
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   const handleDelete = (taskIndex) => {
     const newTaskData = tasks.filter((_, idx) => idx !== taskIndex);

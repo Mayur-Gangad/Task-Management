@@ -80,9 +80,7 @@ const TaskForm = ({ setTask }) => {
             </select>
             <button
               type="submit"
-              className="task-submit"
-              // onClick={handleChange}
-            >
+              className="task-submit"            >
               +Add
             </button>
           </div>
