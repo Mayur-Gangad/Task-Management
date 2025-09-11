@@ -1,0 +1,37 @@
+.task-delete {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.task-delete:hover {
+  background-color: #ebebeb;
+}
+.delete-icon {
+  width: 22px;
+  opacity: 50%;
+  transition: all 0.3s ease-in-out;
+}
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-data {
+  width: 100%;
+  min-height: 100px;
+  border: 1px solid #dcdcdc;
+  padding: 12px;
+}
+
+.card-text {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}

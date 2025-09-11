@@ -1,17 +1,19 @@
 import "./app.css";
+import TaskColumns from "./Components/TaskColumn/TaskColumns";
 import TaskForm from "./Components/TaskForm/TaskForm";
+import ChcekIcon from "../src/assets/checked.png";
 
 const App = () => {
   return (
     <>
       <div className="app">
-        <h2 style={{ textAlign: "center", margin:"50px" }}>Jira Board</h2>
+        <h2 style={{ textAlign: "center", margin: "50px" }}>Jira Board</h2>
         <TaskForm />
         <main className="app-main">
-          <section className="task-column">section 1</section>
-          <section className="task-column">section 2</section>
-          <section className="task-column">section 3</section>
-          <section className="task-column">section 4</section>
+          <TaskColumns title="Ready for Development" />
+          <TaskColumns title="In Progress" />
+          <TaskColumns title="Ready to Test" />
+          <TaskColumns title="Closed" icon={ChcekIcon} />
         </main>
       </div>
     </>
