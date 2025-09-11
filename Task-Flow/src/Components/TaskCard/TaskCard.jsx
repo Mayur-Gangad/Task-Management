@@ -2,16 +2,18 @@ import "./TaskCard.css";
 import Tag from "../Tag/Tag";
 import DeleteIcon from "../../assets/deleteIcon.png";
 
-const TaskCard = () => {
+const TaskCard = ({ title, tags, handleDelete, index }) => {
+  console.log(tags);
   return (
     <article className="card-data">
-      <p className="card-text">This is a sample text</p>
+      <p className="card-text">{title}</p>
       <div className="card">
         <div className="tags">
-          <Tag tagName="Dev" />
-          <Tag tagName="QA" />
+          {tags.map((tag, idx) => (
+            <Tag key={idx} tagName={tag} selected />
+          ))}
         </div>
-        <div className="task-delete">
+        <div className="task-delete" onClick={() => handleDelete(index)}>
           <img className="delete-icon" src={DeleteIcon} />
         </div>
       </div>

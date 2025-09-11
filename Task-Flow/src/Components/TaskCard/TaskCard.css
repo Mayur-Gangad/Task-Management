@@ -24,10 +24,11 @@
 }
 
 .card-data {
+  border-radius: 8px;
   width: 100%;
-  min-height: 100px;
   border: 1px solid #dcdcdc;
   padding: 12px;
+  margin: 15px 24px;
 }
 
 .card-text {
