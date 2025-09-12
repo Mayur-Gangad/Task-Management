@@ -24,10 +24,7 @@ A simple **Jira-like Task Management Board** built with **React** supporting **d
 
 ## 📸 Screenshots  
 ### Dashboard View
-![Dashboard Screenshot](./screenshots/dashboard.png)  
-
-### Drag and Drop
-![Drag and Drop Screenshot](./screenshots/dragdrop.png)  
+![Jira Board](Jira-Board.png)  
 
 
 ---
