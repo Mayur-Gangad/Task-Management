@@ -2,10 +2,28 @@ import "./TaskCard.css";
 import Tag from "../Tag/Tag";
 import DeleteIcon from "../../assets/deleteIcon.png";
 
-const TaskCard = ({ title, tags, handleDelete, index }) => {
-  console.log(tags);
+const TaskCard = ({
+  title,
+  tags,
+  handleDelete,
+  index,
+  setActiveCard,
+  onDropHandler,
+}) => {
   return (
-    <article className="card-data">
+    <article
+      className="card-data"
+      draggable
+      onDragStart={() => {
+        setActiveCard(index);
+      }}
+      onDragEnd={() => {
+        setActiveCard(null);
+      }}
+      onDrop={() => {
+        onDropHandler;
+      }}
+    >
       <p className="card-text">{title}</p>
       <div className="card">
         <div className="tags">

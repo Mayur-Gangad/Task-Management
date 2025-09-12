@@ -8,6 +8,7 @@ const existingTasks = localStorage.getItem("tasks");
 
 const App = () => {
   const [tasks, setTasks] = useState(JSON.parse(existingTasks) || []);
+  const [activeCard, setActiveCard] = useState(null);
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -16,6 +17,22 @@ const App = () => {
   const handleDelete = (taskIndex) => {
     const newTaskData = tasks.filter((_, idx) => idx !== taskIndex);
     setTasks(newTaskData);
+  };
+
+  const onDropHandler = (status, index) => {
+
+    if (activeCard === null || activeCard === undefined) return;
+
+    const taskToMove = tasks[activeCard];
+
+    const updatedTask = tasks.filter((_, idx) => idx !== activeCard);
+
+    updatedTask.splice(index, 0, {
+      ...taskToMove,
+      status: status,
+    });
+
+    setTasks(updatedTask);
   };
   return (
     <>
@@ -28,18 +45,24 @@ const App = () => {
             title="Ready for Development"
             status="Ready for Development"
             handleDelete={handleDelete}
+            setActiveCard={setActiveCard}
+            onDropHandler={onDropHandler}
           />
           <TaskColumns
             tasks={tasks}
             title="In Progress"
             status="In Progress"
             handleDelete={handleDelete}
+            setActiveCard={setActiveCard}
+            onDropHandler={onDropHandler}
           />
           <TaskColumns
             tasks={tasks}
             title="Ready to Test"
             status="Ready to Test"
             handleDelete={handleDelete}
+            setActiveCard={setActiveCard}
+            onDropHandler={onDropHandler}
           />
           <TaskColumns
             tasks={tasks}
@@ -47,6 +70,8 @@ const App = () => {
             icon={ChcekIcon}
             status="Closed"
             handleDelete={handleDelete}
+            setActiveCard={setActiveCard}
+            onDropHandler={onDropHandler}
           />
         </main>
       </div>

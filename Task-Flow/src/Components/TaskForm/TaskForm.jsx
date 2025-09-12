@@ -41,7 +41,6 @@ const TaskForm = ({ setTask }) => {
       return { ...prev, tags: updatedTags };
     });
   };
-  // console.log(taskData.tags);
   return (
     <header className="app-header">
       <form onSubmit={handleSubmit}>

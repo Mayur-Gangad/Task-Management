@@ -5,6 +5,7 @@
 .task-column-heading {
   display: flex;
   align-items: center;
+  padding-bottom: 10px;
 }
 
 .task-column-icon{
