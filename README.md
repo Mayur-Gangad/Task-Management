@@ -36,7 +36,7 @@ A simple **Jira-like Task Management Board** built with **React** supporting **d
 
 ### 1. Clone the repository  
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+https://github.com/Mayur-Gangad/Task-Management.git
 cd your-repo-name
 ```
 
