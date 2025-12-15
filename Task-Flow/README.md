@@ -34,13 +34,6 @@ TaskFlow is a modern, Jira-like task management board built with React. It lets 
 4. **Persist Data** – Tasks are automatically saved in localStorage.  
 
 ---
-
-## 📸 Screenshots  
-
-| Dashboard View | Add Task Modal | Drag & Drop Feature |
-|----------------|----------------|---------------------|
-| ![Dashboard](./images/dashboard.png) | ![Add Task](./images/add-task.png) | ![Drag & Drop](./images/drag-drop.png) |
-
 ---
 
 ## 🔮 Future Enhancements  
